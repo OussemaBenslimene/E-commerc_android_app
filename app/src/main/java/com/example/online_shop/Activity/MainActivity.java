@@ -1,5 +1,6 @@
 package com.example.online_shop.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,6 +38,8 @@ public class MainActivity extends BaseActivity {
         initBanner();
         initCategory();
         initPopular();
+        bottomNavigation();
+
 
     }
 
@@ -134,7 +137,8 @@ public class MainActivity extends BaseActivity {
         CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
         compositePageTransformer.addTransformer(new MarginPageTransformer(40));
         binding.viewPagerSlider.setPageTransformer(compositePageTransformer);
-
-
+    }
+    private void bottomNavigation() {
+        binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(this, CartActivity.class)));
     }
 }

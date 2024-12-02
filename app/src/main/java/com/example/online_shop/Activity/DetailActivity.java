@@ -1,5 +1,6 @@
 package com.example.online_shop.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -96,5 +97,10 @@ public class DetailActivity extends BaseActivity {
 
 
 
+    }
+
+    public void getLocation(View view) {
+        Intent intent = new Intent(this , GpsActivity.class);
+        startActivity(intent);
     }
 }
